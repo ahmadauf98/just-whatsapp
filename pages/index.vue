@@ -1,16 +1,16 @@
 <template>
   <div>
-    <!--  -->
+    <!-- Navigation Bar -->
     <template>
       <Navbar />
     </template>
 
-    <!--  -->
+    <!-- Content -->
     <template>
-      <IntroCard />
+      <CardContent />
     </template>
 
-    <!--  -->
+    <!-- Footer -->
     <template>
       <Footer />
     </template>
@@ -19,16 +19,14 @@
 
 <script>
 import Navbar from '~/components/Navbar.vue'
-import IntroCard from '~/components/IntroCard.vue'
+import CardContent from '~/components/CardContent.vue'
 import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
     Navbar,
-    IntroCard,
+    CardContent,
     Footer,
   },
 }
 </script>
-
-<style lang="scss" scoped></style>
