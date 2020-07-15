@@ -1,6 +1,6 @@
 # **just_whatsapp**
 > Fast, quick approach to send text messages to Whatsapp directly at a contact number without saving the phone number. It support Progressive Web Application (PWA). It can be saved to home screen using chrome browser and safari browser.
-> St
+> Still in development
 
 ## Technical Setup Using NPM
 
