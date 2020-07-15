@@ -1,9 +1,11 @@
 <template>
   <div>
-    <b-card class="card mt-4 mr-5 mb-4 ml-5 pt-3" text-variant="#00473e">
+    <b-card class="card mt-4 mr-5 mb-4 ml-5 pt-3 pb-3" text-variant="#00473e">
       <b-container fluid="lg">
         <b-row>
-          <div class="mx-auto my-auto col-xs-12 col-lg-6">
+          <div
+            class="mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center"
+          >
             <img class="Picture" src="~/static/pic.svg" alt="Picture" />
           </div>
           <div class="mx-auto my-auto col-xs-12 col-lg-6">
@@ -26,8 +28,7 @@
                 </b-form-group>
 
                 <b-button class="btn-submit" type="submit"
-                  >Chat now <b-icon-arrow-up></b-icon-arrow-up
-                ></b-button>
+                  ><BIconCursorFill /> Chat now</b-button>
               </b-form>
             </b-row-form>
           </div>
@@ -51,7 +52,9 @@
 </template>
 
 <script>
+import { BIconCursorFill } from 'bootstrap-vue'
 export default {
+  components: { BIconCursorFill },
   data() {
     return {
       Info:
