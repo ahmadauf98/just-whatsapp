@@ -12,10 +12,6 @@
   </b-navbar>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style scoped>
 /* Global Scoped */
 .Navbar {
