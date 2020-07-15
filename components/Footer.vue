@@ -17,10 +17,6 @@
   </footer>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style  scoped>
 .Footer{
     background-color: #00473e;
