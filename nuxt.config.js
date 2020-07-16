@@ -1,8 +1,5 @@
 
 export default {
-  router: {
-    base: '/Just Whatsapp/'
-  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
