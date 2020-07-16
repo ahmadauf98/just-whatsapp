@@ -1,6 +1,7 @@
 {
   "name": "just_whatsapp",
   "version": "1.0.0",
+  "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -21,6 +22,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
+    "push-dir": "^0.4.1",
     "sass-loader": "^9.0.2"
   }
 }
