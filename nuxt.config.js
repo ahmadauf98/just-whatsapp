@@ -31,6 +31,20 @@ export default {
    */
   css: [],
   /*
+   ** Manifest PWA Module
+   */
+  pwa: {
+    meta:{
+      title: 'Just Whatsapp',
+      author: 'Ahmad Auf'
+    },
+    manifest: {
+      name: 'Just Whatsapp',
+      short_name: 'Just Whatsapp',
+      lang: 'en'
+    }
+  },
+  /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
