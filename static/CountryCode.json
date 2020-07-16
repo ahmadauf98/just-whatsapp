@@ -1,6 +1,5 @@
 {
    "codes": [
-      { "text": "Select Country Code", "value": null },
       {
          "text": "Israel",
          "value": "+972",
