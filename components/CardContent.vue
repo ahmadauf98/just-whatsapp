@@ -11,12 +11,14 @@
           >
             <img class="Picture mb-4" src="~/static/pic.svg" alt="Picture" />
           </div>
-          <div class="mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center justify-content-lg-start">
+          <div
+            class="mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center justify-content-lg-start"
+          >
             <b-row>
               <b-form @submit="">
                 <b-form-group label="Country Code:">
                   <b-form-select
-                    v-model="form.code"
+                    v-model="form.codeNumber"
                     :options="codes"
                     width="500px"
                     required
@@ -25,9 +27,9 @@
 
                 <b-form-group label="Phone Number">
                   <b-form-input
-                    v-model="form.name"
+                    v-model="form.number"
                     required
-                    placeholder="Enter phone number"
+                    placeholder="Enter phone number (Ex. 1160491153)"
                   ></b-form-input>
                 </b-form-group>
 
@@ -121,6 +123,9 @@ import {
   BIconThreeDotsVertical,
   BIconBoxArrowUp,
 } from 'bootstrap-vue'
+import CountryCode from '~/static/CountryCode.json'
+import axios from 'axios'
+
 export default {
   components: {
     BIconCursorFill,
@@ -134,20 +139,17 @@ export default {
         "We create a simple progressive web application (PWA) to ease your daily routines. So, you can directly access whatsapp chat without saving phone number of strangers. Super easy isn't?",
       Dev: '- Just Whatsapp Developer',
       form: {
-        email: '',
-        name: '',
-        code: null,
-        checked: [],
+        number: '',
+        codeNumber: null,
       },
-      codes: [
-        { text: 'Select Country Code', value: null },
-        'Carrots',
-        'Beans',
-        'Tomatoes',
-        'Corn',
-      ],
-      show: true,
+      codes: [],
     }
+  },
+  created() {
+    axios.get('http://localhost:3000/codes').then((response) => {
+      this.codes = response.data
+      console.log(this.codes)
+    })
   },
   method: {},
 }
