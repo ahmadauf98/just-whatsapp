@@ -1,5 +1,14 @@
 <template>
   <div>
+    <b-alert class="my-sm-0 my-md-4 mx-md-4 mx-lg-5 py-3" variant="warning" show dismissible>
+      Important: If you are not using mobile devices, please download Whatsapp
+      for Windows/Mac.
+      <a
+        href="https://www.whatsapp.com/download" target="_blank"
+      >
+      Download here</a
+      >.
+    </b-alert>
     <b-card
       class="card my-sm-0 my-md-4 mx-md-4 mx-lg-5 py-3"
       text-variant="#00473e"
@@ -15,7 +24,7 @@
             class="mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center justify-content-lg-start"
           >
             <b-row>
-              <b-form @submit="">
+              <b-form @submit="onSubmit">
                 <b-form-group label="Country Code:">
                   <b-form-select
                     v-model="form.codeNumber"
@@ -27,7 +36,7 @@
 
                 <b-form-group label="Phone Number">
                   <b-form-input
-                    v-model="form.number"
+                    v-model="form.numberPhone"
                     required
                     placeholder="Enter phone number (Ex. 1160491153)"
                   ></b-form-input>
@@ -124,7 +133,7 @@ import {
   BIconBoxArrowUp,
 } from 'bootstrap-vue'
 import CountryCode from '~/static/CountryCode.json'
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   components: {
@@ -135,23 +144,50 @@ export default {
   },
   data() {
     return {
+      title: 'Just Whatsapp',
       Info:
         "We create a simple progressive web application (PWA) to ease your daily routines. So, you can directly access whatsapp chat without saving phone number of strangers. Super easy isn't?",
       Dev: '- Just Whatsapp Developer',
       form: {
-        number: '',
+        numberPhone: '',
         codeNumber: null,
       },
-      codes: [],
+      codes: CountryCode.codes,
     }
   },
-  created() {
-    axios.get('http://localhost:3000/codes').then((response) => {
-      this.codes = response.data
-      console.log(this.codes)
-    })
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description',
+        },
+      ],
+    }
   },
-  method: {},
+  
+  // created() {
+  //   axios.get('http://localhost:3000/codes').then((response) => {
+  //     this.codes = response.data
+  //     console.log(this.codes)
+  //   })
+  // },
+  methods: {
+    onSubmit(evt) {
+      evt.preventDefault()
+      var dialcode = this.form.codeNumber
+      var phone = dialcode + this.form.numberPhone
+
+      if (!isNaN(phone)) {
+        window.location = 'whatsapp://send?text=' + '&phone=' + phone
+      } else {
+        alert('Please enter a valid phone number.')
+      }
+      return false
+    },
+  },
 }
 </script>
 
