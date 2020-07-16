@@ -1,6 +1,6 @@
 <template>
   <!-- As a heading -->
-  <b-navbar class="Navbar ml-auto" style="dark">
+  <b-navbar class="Navbar ml-auto" style="dark" sticky>
     <b-navbar-brand class="text mx-auto my-auto h1" >
       <img
         src="~/static/brand.svg"
