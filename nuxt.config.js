@@ -1,16 +1,4 @@
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: '/<just-whatsapp>/',
-        },
-      }
-    : {}
-
 export default {
-  router: {
-    base: '/<just-whatsapp>/',
-  },
   /*
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
@@ -68,10 +56,5 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
-  /* package.json */
-  scripts: {
-    'build:gh-pages': 'DEPLOY_ENV=GH_PAGES nuxt build',
-    'generate:gh-pages': 'DEPLOY_ENV=GH_PAGES nuxt generate',
-  },
+  build: {}
 }

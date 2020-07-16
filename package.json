@@ -8,8 +8,7 @@
     "start": "nuxt start",
     "export": "nuxt export",
     "generate": "nuxt generate",
-    "serve": "nuxt serve",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "serve": "nuxt serve"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.20",
