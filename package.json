@@ -1,7 +1,6 @@
 {
   "name": "just_whatsapp",
   "version": "1.0.0",
-  "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
   "private": true,
   "scripts": {
     "dev": "nuxt",
