@@ -1,12 +1,15 @@
 <template>
   <div>
-    <b-alert class="my-sm-0 my-md-4 mx-md-4 mx-lg-5 py-3" variant="warning" show dismissible>
+    <b-alert
+      class="my-sm-0 my-md-4 mx-md-4 mx-lg-5 py-3"
+      variant="warning"
+      show
+      dismissible
+    >
       Important: If you are not using mobile devices, please download Whatsapp
       for Windows/Mac.
-      <a
-        href="https://www.whatsapp.com/download" target="_blank"
-      >
-      Download here</a
+      <a href="https://www.whatsapp.com/download" target="_blank">
+        Download here</a
       >.
     </b-alert>
     <b-card
@@ -26,12 +29,22 @@
             <b-row>
               <b-form @submit="onSubmit">
                 <b-form-group label="Country Code:">
-                  <b-form-select
+                  <!-- <b-form-select
                     v-model="form.codeNumber"
                     :options="codes"
                     width="500px"
                     required
-                  ></b-form-select>
+                  ></b-form-select> -->
+                  <b-form-input
+                    list="input-list"
+                    v-model="form.codeNumber"
+                    placeholder="Select country code"
+                  ></b-form-input>
+                  <b-form-datalist
+                    id="input-list"
+                    :options="codes"
+                    required
+                  ></b-form-datalist>
                 </b-form-group>
 
                 <b-form-group label="Phone Number">
@@ -167,7 +180,7 @@ export default {
       ],
     }
   },
-  
+
   // created() {
   //   axios.get('http://localhost:3000/codes').then((response) => {
   //     this.codes = response.data
