@@ -8,7 +8,11 @@
     >
       Important: If you are not using mobile devices, please download Whatsapp
       for Windows/Mac.
-      <a href="https://www.whatsapp.com/download" target="_blank">
+      <a
+        href="https://www.whatsapp.com/download"
+        target="_blank"
+        rel="noopener"
+      >
         Download here</a
       >.
     </b-alert>
@@ -22,40 +26,33 @@
             class="Left mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center justify-content-lg-end"
           >
             <img class="Picture mb-4" src="~/static/pic.svg" alt="Picture" />
+            
           </div>
           <div
             class="mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center justify-content-lg-start"
           >
             <b-row>
               <b-form @submit="onSubmit">
-                <b-form-group label="Country Code:">
-                  <!-- <b-form-select
+                <b-form-group>
+                  <p>Country Code <b-badge variant="warning">{{form.codeNumber}}</b-badge></p>
+                  <b-form-select
                     v-model="form.codeNumber"
                     :options="codes"
                     width="500px"
                     required
-                  ></b-form-select> -->
-                  <b-form-input
-                    list="input-list"
-                    v-model="form.codeNumber"
-                    placeholder="Select country code"
-                  ></b-form-input>
-                  <b-form-datalist
-                    id="input-list"
-                    :options="codes"
-                    required
-                  ></b-form-datalist>
+                  ></b-form-select>
                 </b-form-group>
 
-                <b-form-group label="Phone Number">
+                <b-form-group>
+                  <p>Phone Number <b-badge variant="warning">{{form.numberPhone}}</b-badge></p>
                   <b-form-input
                     v-model="form.numberPhone"
                     required
-                    placeholder="Ex.1160491153"
+                    placeholder="1160491143"
                   ></b-form-input>
                 </b-form-group>
 
-                <b-button class="btn-submit" type="submit"
+                <b-button class="btn-submit" block size="md" type="submit"
                   ><BIconCursorFill /> Chat now</b-button
                 >
               </b-form>
@@ -90,8 +87,17 @@
           class="card-alternate-2 font-weight-bold text-center mb-4"
         >
           <b-card-text class="font-weight-normal"
-            >Search justwhatsapp.io and make sure all content are perfectly
-            loaded on the browser.</b-card-text
+            >Go to
+            <a
+              class="hyperlink"
+              href="https://just-whatsapp.web.app"
+              target="_blank"
+              rel="noopener"
+            >
+              just-whatsapp.web.app</a
+            >
+            and make sure all content are perfectly loaded on the
+            browser.</b-card-text
           >
         </b-card>
 
@@ -113,8 +119,7 @@
           class="card-alternate-2 font-weight-bold text-center mb-4"
         >
           <b-card-text class="font-weight-normal"
-            >Find and select 'Add to homescreen'. Fill in the name of the apps
-            and all set. Goodluck!</b-card-text
+            >Find and select 'Add to homescreen' and all set. Goodluck!</b-card-text
           >
         </b-card>
       </b-card-group>
@@ -146,7 +151,6 @@ import {
   BIconBoxArrowUp,
 } from 'bootstrap-vue'
 import CountryCode from '~/static/CountryCode.json'
-// import axios from 'axios'
 
 export default {
   components: {
@@ -165,7 +169,8 @@ export default {
         numberPhone: '',
         codeNumber: null,
       },
-      codes: [],
+      phone: this.numberPhone + this.codeNumber,
+      codes: CountryCode.codes,
     }
   },
   head() {
@@ -181,12 +186,6 @@ export default {
     }
   },
 
-  // created() {
-  //   axios.get('http://localhost:3000/codes').then((response) => {
-  //     this.codes = response.data
-  //     console.log(this.codes)
-  //   })
-  // },
   methods: {
     onSubmit(evt) {
       evt.preventDefault()
@@ -222,6 +221,16 @@ export default {
   font-weight: bold;
   border-style: none;
   margin-top: 12px;
+}
+
+.hyperlink {
+  text-decoration: none;
+  color: white;
+}
+
+.hyperlink:hover {
+  color: #00473e;
+  font-weight: 500;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
