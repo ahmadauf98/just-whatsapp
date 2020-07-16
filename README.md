@@ -1,6 +1,9 @@
-# **just_whatsapp**
+# **Just Whatsapp**
 > Fast, quick approach to send text messages to Whatsapp directly at a contact number without saving the phone number. It support Progressive Web Application (PWA). It can be saved to home screen using chrome browser and safari browser.
 > Still in development
+
+## Live Progressive Web Application (PWA)
+To see live demo, [Click Here](https://just-whatsapp.web.app)
 
 ## Technical Setup Using NPM
 
@@ -31,6 +34,12 @@ $ npm run start
 * Free Illustration & Theme
   - [Happyheus](https://www.happyhues.co)
   - [unDraw](https://undraw.co)
+
+## Credits
+* [JSON File of Phone dial code for each Country Courtesy of "Goles"](https://gist.github.com/Goles/3196253)
+  - I made several changes of the data to coop my project requirement.
+* [Whatsapp](https://www.whatsapp.com)
+  - Whatsapp provides me URL Scheme to redirect to the whatsapp chat application.
 
 ## License
 This library is under `MIT license`, please look at the LICENSE file.
