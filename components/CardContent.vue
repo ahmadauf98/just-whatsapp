@@ -51,7 +51,7 @@
                   <b-form-input
                     v-model="form.numberPhone"
                     required
-                    placeholder="Enter phone number (Ex. 1160491153)"
+                    placeholder="Ex.1160491153"
                   ></b-form-input>
                 </b-form-group>
 
@@ -165,7 +165,7 @@ export default {
         numberPhone: '',
         codeNumber: null,
       },
-      codes: CountryCode.codes,
+      codes: [],
     }
   },
   head() {
