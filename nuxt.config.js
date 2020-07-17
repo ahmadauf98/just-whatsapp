@@ -34,15 +34,15 @@ export default {
    ** Manifest PWA Module
    */
   pwa: {
-    meta:{
+    meta: {
       title: 'Just Whatsapp',
-      author: 'Ahmad Auf'
+      author: 'Ahmad Auf',
     },
     manifest: {
       name: 'Just Whatsapp',
       short_name: 'Just Whatsapp',
-      lang: 'en'
-    }
+      lang: 'en',
+    },
   },
   /*
    ** Plugins to load before mounting the App
@@ -57,7 +57,14 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: [],
+  buildModules: [
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-143688410-3',
+      },
+    ],
+  ],
   /*
    ** Nuxt.js modules
    */
@@ -70,5 +77,5 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
 }
