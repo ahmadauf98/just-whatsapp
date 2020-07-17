@@ -11,7 +11,9 @@
       Just <b>Whatsapp</b> Developer</b-navbar-brand
     >
         </svg>
-        <div class="text-white d-block mb-3">&reg; All Right Reserved - {{ new Date().getFullYear() }}</div>
+        <label class="text-white d-block mb-2">&reg; All Right Reserved - {{ new Date().getFullYear() }}</label>
+        <b-badge class="text-capitalize" href="https://github.com/ahmadauf98/just-whatsapp" target="_blank" rel="noopener" variant="warning">Github</b-badge>
+        
       </div>
     </div>
   </footer>
