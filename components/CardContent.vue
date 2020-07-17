@@ -173,7 +173,7 @@ export default {
     return {
       title: 'Just Whatsapp',
       Info:
-        "We create a simple progressive web application (PWA) to ease your daily routines. So, you can directly access whatsapp chat without saving phone number of strangers. Super easy isn't?",
+        'Fast, quick approach to send text messages to Whatsapp directly at a contact number without saving the phone number. It support Progressive Web Application (PWA).So, it can be saved to home screen using chrome browser and safari browser.',
       Dev: '- Just Whatsapp Developer',
       form: {
         numberPhone: '',
