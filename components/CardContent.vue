@@ -6,8 +6,8 @@
       show
       dismissible
     >
-      Important: If you are not using mobile devices, please download Whatsapp
-      for Windows/Mac.
+      Important: If you do not have Whatsapp Application, please download it
+      first.
       <a
         href="https://www.whatsapp.com/download"
         target="_blank"
@@ -26,7 +26,6 @@
             class="Left mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center justify-content-lg-end"
           >
             <img class="Picture mb-4" src="~/static/pic.svg" alt="Picture" />
-            
           </div>
           <div
             class="mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center justify-content-lg-start"
@@ -34,7 +33,12 @@
             <b-row>
               <b-form @submit="onSubmit">
                 <b-form-group>
-                  <p>Country Code <b-badge variant="warning">{{form.codeNumber}}</b-badge></p>
+                  <label
+                    >Country Code
+                    <b-badge variant="warning">{{
+                      form.codeNumber
+                    }}</b-badge></label
+                  >
                   <b-form-select
                     v-model="form.codeNumber"
                     :options="codes"
@@ -44,7 +48,12 @@
                 </b-form-group>
 
                 <b-form-group>
-                  <p>Phone Number <b-badge variant="warning">{{form.numberPhone}}</b-badge></p>
+                  <label
+                    >Phone Number
+                    <b-badge variant="warning">{{
+                      form.numberPhone
+                    }}</b-badge></label
+                  >
                   <b-form-input
                     v-model="form.numberPhone"
                     required
@@ -119,7 +128,8 @@
           class="card-alternate-2 font-weight-bold text-center mb-4"
         >
           <b-card-text class="font-weight-normal"
-            >Find and select 'Add to homescreen' and all set. Goodluck!</b-card-text
+            >Find and select 'Add to homescreen' and all set.
+            Goodluck!</b-card-text
           >
         </b-card>
       </b-card-group>
@@ -169,7 +179,6 @@ export default {
         numberPhone: '',
         codeNumber: null,
       },
-      phone: this.numberPhone + this.codeNumber,
       codes: CountryCode.codes,
     }
   },
@@ -193,6 +202,7 @@ export default {
       var phone = dialcode + this.form.numberPhone
 
       if (!isNaN(phone)) {
+        this.progress = true
         window.location = 'whatsapp://send?text=' + '&phone=' + phone
       } else {
         alert('Please enter a valid phone number.')
