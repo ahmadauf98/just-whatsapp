@@ -23,7 +23,7 @@
       <b-container fluid="lg">
         <b-row>
           <div
-            class="Left mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center justify-content-lg-end"
+            class="Left mx-auto my-auto col-xs-12 col-lg-6 d-flex justify-content-center"
           >
             <img class="Picture mb-4" src="~/static/pic.svg" alt="Picture" />
           </div>
@@ -85,8 +85,8 @@
           class="card-alternate-1 font-weight-bold text-center mb-4"
         >
           <b-card-text class="font-weight-normal"
-            >Open your browser, preferable chrome browser on android devices and
-            safari browser on iphone/ipad devices.</b-card-text
+            >Open your browser, preferable chrome browser on Android devices,
+            and safari browser on iPhone/iPad devices.</b-card-text
           >
         </b-card>
 
@@ -105,7 +105,7 @@
             >
               just-whatsapp.web.app</a
             >
-            and make sure all content are perfectly loaded on the
+            and make sure all content is perfectly loaded on the
             browser.</b-card-text
           >
         </b-card>
@@ -117,7 +117,7 @@
         >
           <b-card-text class="font-weight-normal"
             >Open <BIconThreeDotsVertical /> on the top-right side of the chrome
-            browser and <BIconBoxArrowUp /> on the bottom center of safari
+            browser and <BIconBoxArrowUp /> the bottom center of the safari
             browser.</b-card-text
           >
         </b-card>
@@ -128,8 +128,8 @@
           class="card-alternate-2 font-weight-bold text-center mb-4"
         >
           <b-card-text class="font-weight-normal"
-            >Find and select 'Add to homescreen' and all set.
-            Goodluck!</b-card-text
+            >Find and select 'Add to home screen' and all set. Good
+            luck!</b-card-text
           >
         </b-card>
       </b-card-group>
@@ -173,7 +173,7 @@ export default {
     return {
       title: 'Just Whatsapp',
       Info:
-        'Fast, quick approach to send text messages to Whatsapp directly at a contact number without saving the phone number. It support Progressive Web Application (PWA).So, it can be saved to home screen using chrome browser and safari browser.',
+        'A fast, quick approach to send text messages to Whatsapp directly without saving the phone number. It supports Progressive Web Application (PWA). It can be saved to the home screen using a chrome browser and safari browser.',
       Dev: '- Just Whatsapp Developer',
       form: {
         numberPhone: '',
