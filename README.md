@@ -1,4 +1,4 @@
-# **Just Whatsapp** [![License](https://raw.githubusercontent.com/ahmadauf98/just-whatsapp/master/LICENSE)](https://en.wikipedia.org/wiki/MIT_License)
+# **Just Whatsapp**
 > A fast, quick approach to send text messages to Whatsapp directly without saving the phone number. It supports Progressive Web Application (PWA). It can be saved to the home screen using a chrome browser and safari browser. 
 
 ## Live Progressive Web Application (PWA)
